@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>选择困难症</title>
+    <style>
+        *{
+            padding:0;
+            margin:0;
+        }
+        html,body{
+            height:100%
+
+        }
+        #all{
+            width:100%;
+            height: 100%;
+            background: url(img/bglogo.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+        }
+        .top{
+            width: 300px;
+            height: 300px;
+            background:rgba(255,255,255,0.2);
+            position: absolute;
+            top: 27%;
+            right:15%;
+
+        }
+        #view{
+            width: 100%;
+            height:200px;
+            color: navajowhite;
+            font-size:24px;
+            text-align: center;
+            line-height: 200px;
+        }
+        #foods{
+            width:120px;
+            height: 35px;
+            background: skyblue;
+            margin: 10px auto;
+            text-align: center;
+            line-height: 35px;
+            color: white;
+            font-weight: 700;
+            font-size: 18px;
+            border-radius: 5px;
+        }
+        #foods:hover{
+            box-shadow: 0 0 10px 10px skyblue;
+        }
+    </style>
+</head>
+<body>
+   <div id="all">
+       <div class="top">
+       <div id="view"></div>
+       <p id="foods">
+           Click Me!
+       </p>
+       </div>
+   </div>
+   <script>
+      var foods = document.getElementById("foods");
+      var view =  document.getElementById("view");
+      foods.onclick = function () {
+          var arr = ["螺蛳粉","肉夹馍","黄焖鸡","猪油拌饭","卤肉饭","红烧牛肉面","烤串","蒸菜","火腿炒蛋","唐人神香肠"];
+          var random = parseInt(Math.random()*10);
+          view.innerHTML = arr[random];
+      }
+
+
+   </script>
+</body>
+</html>
